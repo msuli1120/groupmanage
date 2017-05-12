@@ -1,0 +1,48 @@
+{
+  "members": [{
+    "name": "Xing Li",
+    "age": "26",
+    "sex": "male",
+    "location": "Seattle, WA",
+    "join-date": "5/12/2017, 9:00:00 AM",
+    "role": "Treasurer",
+    "profession-age": "less than a year",
+    "bio": "who loves coding, playing video games, eat and sleep."
+  }, {
+    "name": "Alysia",
+    "age": "young",
+    "sex": "female",
+    "location": "Seattle, WA",
+    "join-date": "5/15/2017, 9:00:00 AM",
+    "role": "President",
+    "profession-age": "few years",
+    "bio": "who is computer person that loves teaching."
+  }, {
+    "name": "Eliot",
+    "age": "30",
+    "sex": "male",
+    "location": "Seattle, WA",
+    "join-date": "5/13/2017, 8:00:00 AM",
+    "role": "CEO",
+    "profession-age": "less than a year",
+    "bio": "who loves climbing"
+  }, {
+    "name": "Rob",
+    "age": "40",
+    "sex": "male",
+    "location": "Seattle, WA",
+    "join-date": "5/13/2017, 2:00:00 PM",
+    "role": "CEO",
+    "profession-age": "less than a year",
+    "bio": "who loves to eat skittles"
+  }, {
+    "name": "Max",
+    "age": "26",
+    "sex": "male",
+    "location": "Seattle, WA",
+    "join-date": "5/14/2017, 10:00:00 AM",
+    "role": "secretary",
+    "profession-age": "less than a year",
+    "bio": "who loves to drink beer."
+  }]
+}
