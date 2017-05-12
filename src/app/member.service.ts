@@ -34,4 +34,9 @@ export class MemberService {
       professionAge: member.professionAge
     });
   }
+
+  deleteMember(member) {
+    var memberInDatabase = this.getMemberById(member.$key);
+    memberInDatabase.remove();
+  }
 }
