@@ -3,3 +3,37 @@
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
+
+.jumbotron {
+  background-image: url('https://www.oscar-rodriguez.co/wp-content/uploads/2016/10/codigo-php.jpg');
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+div.panel-heading p {
+  position: relative;
+  display: inline;
+  float: right;
+  margin-top: -.7%;
+}
+
+div.panel-info {
+  padding-top: 2%;
+}
+
+div.panel-heading img {
+  width: 50px;
+  height: 50px;
+}
+
+div.panel-heading h4 {
+  margin-left: 5%;
+  margin-top: -3.5%;
+}
+
+div.col-md-4 img {
+  width: 175px;
+  height: 196px;
+}

@@ -12,6 +12,19 @@ import { AdminComponent } from './admin/admin.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
 import { EditComponent } from './edit/edit.component';
 import { routing } from './app.routing';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
+import { AgePipe } from './age.pipe';
+import { SexPipe } from './sex.pipe';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket,
+  messagingSenderId: masterFirebaseConfig.messagingSenderId
+};
 
 @NgModule({
   declarations: [
@@ -22,13 +35,17 @@ import { routing } from './app.routing';
     ContactComponent,
     AdminComponent,
     MemberDetailComponent,
-    EditComponent
+    EditComponent,
+    AgePipe,
+    SexPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    Ng2FilterPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
