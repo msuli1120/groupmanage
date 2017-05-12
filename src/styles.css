@@ -29,11 +29,16 @@ div.panel-heading img {
 }
 
 div.panel-heading h4 {
-  margin-left: 5%;
+  margin-left: 6%;
   margin-top: -3.5%;
 }
 
 div.col-md-4 img {
   width: 175px;
   height: 196px;
+}
+
+div.col-md-5 img {
+  width: 200px;
+  height: 280px;
 }

@@ -4,35 +4,35 @@
   <div class="col-md-4">
     <div class="form-group">
       <label>Role:</label>
-      <input [(ngModel)]="member.role" placeholder="member.role" value="member.role">
+      <input [(ngModel)]="member.role" placeholder="{{member.role}}" value="{{member.role}}">
     </div>
     <div class="form-group">
       <label>Name:</label>
-      <input [(ngModel)]="member.name" placeholder="member.name" value="member.name">
+      <input [(ngModel)]="member.name" placeholder="{{member.name}}" value="{{member.name}}">
     </div>
     <div class="form-group">
       <label>Age:</label>
-      <input [(ngModel)]="member.age" placeholder="member.age" value="member.age">
+      <input [(ngModel)]="member.age" placeholder="{{member.age}}" value="{{member.age}}">
     </div>
     <div class="form-group">
       <label>Sex:</label>
-      <input [(ngModel)]="member.sex" placeholder="member.sex" value="member.sex">
+      <input [(ngModel)]="member.sex" placeholder="{{member.sex}}" value="{{member.sex}}">
     </div>
     <div class="form-group">
       <label>Picture:</label>
-      <input [(ngModel)]="member.picture" placeholder="member.picture" value="member.picture">
+      <input [(ngModel)]="member.picture" placeholder="{{member.picture}}" value="{{member.picture}}">
     </div>
     <div class="form-group">
       <label>Location:</label>
-      <input [(ngModel)]="member.location" placeholder="member.location" value="member.location">
+      <input [(ngModel)]="member.location" placeholder="{{member.location}}" value="{{member.location}}">
     </div>
     <div class="form-group">
       <label>Profession Age:</label>
-      <input [(ngModel)]="member.professionAge" placeholder="member.professionAge" value="member.professionAge">
+      <input [(ngModel)]="member.professionAge" placeholder="{{member.professionAge}}" value="member.professionAge">
     </div>
     <div class="form-group">
       <label>Bio:</label>
-      <textarea [(ngModel)]="member.bio" placeholder="member.bio" value="member.bio"></textarea>
+      <textarea [(ngModel)]="member.bio" placeholder="{{member.bio}}" value="{{member.bio}}"></textarea>
     </div>
     <button (click)="update(member)">Update {{member.name}}'s Info</button>
     <button (click)="delete(member)" class="bg-danger">Delete {{member.name}}</button>
