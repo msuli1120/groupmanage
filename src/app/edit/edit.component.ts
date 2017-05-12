@@ -9,7 +9,7 @@ import { MemberService } from '../member.service';
 })
 export class EditComponent implements OnInit {
   @Input() member;
-  updatesuccess = false;
+  updateSuccess = false;
   constructor(private memberService: MemberService) { }
 
   ngOnInit() {
@@ -17,7 +17,6 @@ export class EditComponent implements OnInit {
 
   update(member) {
     this.memberService.updateMember(member);
-    this.updatesuccess = true;
   }
 
 }

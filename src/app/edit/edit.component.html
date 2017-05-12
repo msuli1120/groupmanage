@@ -36,11 +36,7 @@
     </div>
     <button (click)="update(member)">Update {{member.name}}'s Info</button>
   </div>
-  <div class="col-md-5" *ngIf="updatesuccess">
-    <div class="panel-success">
-      <div class="panel-heading">
-        <h3>Update Successfully!</h3>
-      </div>
-    </div>
+  <div class="col-md-5">
+    <img src="{{member.picture}}" alt="{{member.name}}">
   </div>
 </div>

@@ -28,7 +28,7 @@ export class MemberService {
       location: member.location,
       name: member.name,
       age: member.age,
-      sex: member.sex,
+      sex: member.sex.toLowerCase(),
       picture: member.picture,
       bio: member.bio,
       professionAge: member.professionAge
