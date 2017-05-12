@@ -1,6 +1,15 @@
 <h2>Members</h2>
 
 <input type="text" [(ngModel)]="userFilter.name" placeholder="search by name">
+<select (change)="changeRole($event.target.value)">
+  <option value="all">All</option>
+  <option value="member">Members</option>
+  <option value="manager">Managers</option>
+  <option value="secretary">Secretarys</option>
+  <option value="treasurer">Treasurers</option>
+  <option value="ceo">CEOs</option>
+  <option value="president">Presidents</option>
+</select>
 <select (change)="changeSex($event.target.value)">
   <option value="all">All</option>
   <option value="male">Male</option>
@@ -12,9 +21,8 @@
   <option value="lt40">30 To 40-year-old</option>
   <option value="olderthan40">Older than 40</option>
 </select>
-
 <div class="container">
-  <div *ngFor="let member of members | async | filterBy:userFilter | age:byAge | sex:bySex">
+  <div *ngFor="let member of members | async | filterBy:userFilter | role:byRole | age:byAge | sex:bySex">
     <div class="panel-info col-md-11">
       <div class="panel-heading">
         <img src="{{member.picture}}" alt="{{member.name}}'s picture">

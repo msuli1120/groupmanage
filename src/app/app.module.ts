@@ -17,6 +17,7 @@ import { AngularFireModule } from 'angularfire2';
 import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
 import { AgePipe } from './age.pipe';
 import { SexPipe } from './sex.pipe';
+import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -37,7 +38,8 @@ export const firebaseConfig = {
     MemberDetailComponent,
     EditComponent,
     AgePipe,
-    SexPipe
+    SexPipe,
+    RolePipe
   ],
   imports: [
     BrowserModule,

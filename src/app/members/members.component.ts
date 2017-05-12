@@ -16,6 +16,7 @@ export class MembersComponent implements OnInit {
   userFilter: any = { name: ''};
   byAge: string = 'all';
   bySex: string = 'all';
+  byRole: string = 'all';
   constructor( private router: Router, private memberService: MemberService) { }
 
   ngOnInit() {
@@ -32,6 +33,10 @@ export class MembersComponent implements OnInit {
 
   changeSex(option) {
     this.bySex = option;
+  }
+
+  changeRole(option) {
+    this.byRole = option;
   }
 
 }
