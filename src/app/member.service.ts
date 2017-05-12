@@ -20,4 +20,18 @@ export class MemberService {
   addMember(member: Member) {
     this.members.push(member);
   }
+
+  updateMember(member) {
+    var memberInDatabase = this.getMemberById(member.$key);
+    memberInDatabase.update({
+      role: member.role,
+      location: member.location,
+      name: member.name,
+      age: member.age,
+      sex: member.sex,
+      picture: member.picture,
+      bio: member.bio,
+      professionAge: member.professionAge
+    });
+  }
 }

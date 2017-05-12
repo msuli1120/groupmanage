@@ -10,6 +10,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
   providers: [MemberService, AngularFireDatabase]
 })
 export class AdminComponent implements OnInit {
+  success = false;
 
   constructor(private memberService: MemberService) { }
 
@@ -19,6 +20,8 @@ export class AdminComponent implements OnInit {
   saveMember(name: string, age: number, sex: string, bio: string, role: string, location: string, professionAge: string, picture: string) {
     var d = new Date();
     var time = d.toLocaleString();
+    role = role.charAt(0).toUpperCase() + role.slice(1);
+    sex = sex.toLowerCase();
     if (picture === '') {
       picture = 'http://grumpymonks.co.uk/w/wp-content/uploads/2015/03/funny-avater13.png';
       if ((name === '') || (sex === '') || (bio === '') || (role === '') || (location === '') || (professionAge === '')) {
@@ -29,11 +32,13 @@ export class AdminComponent implements OnInit {
         } else {
           var newMember: Member = new Member(name, age, sex, bio, role, time, location, professionAge, picture);
           this.memberService.addMember(newMember);
+          this.success = true;
         }
       }
     } else {
       var newMember: Member = new Member(name, age, sex, bio, role, time, location, professionAge, picture);
       this.memberService.addMember(newMember);
+      this.success = true;
     }
   }
 }

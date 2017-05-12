@@ -1,36 +1,49 @@
 <h2>Admin</h2>
 
 <h4>Add A New Member</h4>
-<div class="form-group">
-  <label>Role:</label>
-  <input #role>
+<div class="row">
+  <div class="col-md-7">
+    <div class="form-group">
+      <label>Role:</label>
+      <input #role>
+    </div>
+    <div class="form-group">
+      <label>Name:</label>
+      <input #name>
+    </div>
+    <div class="form-group">
+      <label>Age:</label>
+      <input #age>
+    </div>
+    <div class="form-group">
+      <label>Sex:</label>
+      <input #sex>
+    </div>
+    <div class="form-group">
+      <label>Picture:</label>
+      <input #picture>
+    </div>
+    <div class="form-group">
+      <label>Location:</label>
+      <input #location>
+    </div>
+    <div class="form-group">
+      <label>Profession Age:</label>
+      <input #professionAge>
+    </div>
+    <div class="form-group">
+      <label>Bio:</label>
+      <textarea #bio></textarea>
+    </div>
+    <button (click)="saveMember(name.value, age.value, sex.value, bio.value, role.value, location.value, professionAge.value, picture.value); role.value=''; name.value=''; sex.value=''; bio.value=''; picture.value=''; location.value=''; professionAge.value=''; age.value=''">Save</button>
+
+    <app-members></app-members>
+  </div>
+  <div class="col-md-5" *ngIf="success">
+    <div class="panel-success">
+      <div class="panel-heading">
+        <h3>Member has been added successfully!</h3>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="form-group">
-  <label>Name:</label>
-  <input #name>
-</div>
-<div class="form-group">
-  <label>Age:</label>
-  <input #age>
-</div>
-<div class="form-group">
-  <label>Sex:</label>
-  <input #sex>
-</div>
-<div class="form-group">
-  <label>Picture:</label>
-  <input #picture>
-</div>
-<div class="form-group">
-  <label>Location:</label>
-  <input #location>
-</div>
-<div class="form-group">
-  <label>Profession Age:</label>
-  <input #professionAge>
-</div>
-<div class="form-group">
-  <label>Bio:</label>
-  <textarea #bio></textarea>
-</div>
-<button (click)="saveMember(name.value, age.value, sex.value, bio.value, role.value, location.value, professionAge.value, picture.value); role.value=''; name.value=''; sex.value=''; bio.value=''; picture.value=''; location.value=''; professionAge.value=''; age.value=''">Save</button>
